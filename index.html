@@ -5,7 +5,7 @@
         <link rel='stylesheet' href='css/style.css'/>
         <title>Boomsourcing</title>
         <link rel="icon" href="images/index.png">
-        <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'/>
+<!--        <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'/>-->
         <style>
             *,
             *::before,
@@ -14,7 +14,7 @@
             }
 body {
   display: flex;
-  min-height: 100vh;
+  //min-height: 100vh;
   flex-direction: column;
   margin: 0;
 }
@@ -25,7 +25,7 @@ main {
     flex: auto;
     //overflow: auto;
 }
-            main .first, main .second {
+            main .first {
   display: flex;
     flex: 1;
     min-height: 100vh;
@@ -36,26 +36,31 @@ article {
     
 }
             header article{
-                background-color: lightcoral
+                background-colorr: lightcoral
             }
 aside {
   flex-basis: 13vw;
-  //background: beige;
+  //background-colorr: beige;
 }
             header{
                 position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
+                z-index: 500;
             }
 header, footer {
     display: flex;
-  background: yellowgreen;
+  background-colorr: yellowgreen;
   height: 13vh;
     flex-direction: row;
     border: 1px dotted #000;
 }
             .logo{
-                margin: auto 0;
+                //margin: auto 0;
+                display: flex;
+                justify-content: center;
+  flex-direction: column;
+  text-align: center;
             }
             .logo img{
                 width: 213px;
@@ -64,34 +69,54 @@ header, footer {
             .header{
                 display: flex;
                 flex-direction: row;
+                
             }
             .header .nav{
-                background-color: aqua;
+                background-colorr: aqua;
             }
-            .header ul{
+            .header .nav ul{
                 display: flex;
                 flex-direction: row;
+                margin: 0 auto;
+                //justify-content:space-around;
                 
                 height: 100%;
             }
             .header .nav ul li:hover{
-                background-color: green;
+                background-colorr: green;
             }
             .nav li, .social-media li{
                 list-style-type: none;
                 cursor: pointer;
             }
             .nav li{
-                margin: 0 0.5em;
+               margin: 0 1em;
+               display: flex;
+                justify-content: center;
+  flex-direction: column;
+  text-align: center;
+                
+            }
+            .header .space{
+                display: flex;
+                flex: 2 2 100vw;
+                background-colorr: brown;
+            }
+            .social-media ul{
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+                padding: 2em 0.75em;
+                
             }
             .social-media li{
-                margin: 0 0.25em;
-            }
-            .social-media li{
-                background-color: darkslategray;
+                background-colorr: darkslategray;
                 border-radius: 100px;
                 height: 2em;
                 padding: 0.5em 0.75em;
+                margin: auto 0.25em;
+                
+                
             }
             .social-media li i{
                 color: white;
@@ -101,16 +126,165 @@ header, footer {
                 background-position: top;
                 background-repeat: no-repeat;
                 background-size: cover;
+                display: flex;
                 min-height: 77.6vh!important;
                 margin-top: 13vh;
-                overflow: hidden!important;
+                //overflow: hidden!important;
+                
+            }
+            .first article{
+                display: flex;
+                flex-direction: row;
+            }
+            .second{
+                display: flex;
+                min-height: 25vh;
+                //background-colorr: pink;
+                //flex: 1;
+            }
+            .brands{
+                background-colorr: firebrick;
+                //overflow:hidden;
+                
+            }
+            .brands ul{
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                margin: 0;
+                //width: 100%;
+                justify-content:space-between;
+                align-items: center;    
+                padding-left: 0;
+            }
+            .brands ul li{
+                border: 1px red solid;
+                //flex-basis: 16%;
+                
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+                //flex-grow: 1;
+                flex: 1 1 0
+            }
+            .desc{
+                //display: flex;
+                //flex-direction: column;
+                //flex-basis: 50vw;
+                //height: 100%;
+                width: 50%;
+                //background-colorr:  darkviolet;
+            }
+            .volcano{
+                display: flex;
+                overflow:hidden;
+                z-index: 0;
+                width: 50%;
+                
+                
             }
             .volcano img{
-                height: 30em;
-                width: 42em;
-                margin: 11.5em 0 -5em 27.5em;
-                overflow: hidden;
+                display: block;
+                //border: 1px yellow solid;
+                width: 716px;
+                height: 579px;
+                margin-top: 10em;
+                margin-left: -5em;
+                z-index: 3;
+            //    overflow: hidden;
                 
+            }
+            .third{
+                min-height: 90vh;
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .third .pricing{
+                background-colorr: dodgerblue;
+                display: flex;
+                flex-direction: column;
+            }
+            .third .top{
+                min-height: 22.5%;
+                background-colorr: darkviolet;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 1em;
+            }
+            .top p{
+                font-size: 1.5em;
+            }
+            .third .bottom{
+                min-height: 77.5%;
+                background-colorr: lime;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: baseline;
+                padding-top: 1em;
+            }
+            .bottom .one, .bottom .two, .bottom .three{
+                min-height: 75%;
+                min-width: 30%;
+                display: flex;
+                flex-direction: row;
+                background-colorr: darkmagenta;
+            }
+            .fourth{
+                display: flex;
+                flex-direction: row;
+                min-height: 150vh;
+            }
+            .fourth article{
+                display: flex;
+                flex-direction: row;
+                background-colorr: darkolivegreen;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .fourth .bigbox{
+                height: 90%;
+                width: 100%;
+                background-colorr: darkcyan;
+                border: 1px red solid;
+                border-radius: 1em;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+            }
+            .bigbox .uno, .bigbox .dos, .bigbox .tres, .bigbox .quartz{
+                width: 50%;
+                height: 50%;
+                
+            }
+            .uno{
+                background-colorr: darkgoldenrod;
+                background-image: url(images/compuman.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .quartz{
+                background-colorr: forestgreen;
+            }
+            .fifth{
+                display: flex;
+                flex-direction: row;
+                min-height: 40vh;
+            }
+            .fifth article{
+                display: flex;
+                flex-direction: column;
+                background-colorr: darkorange;
+                justify-content: center;
+                align-items: center;
             }
         </style>
     </head>
@@ -121,6 +295,8 @@ header, footer {
     <article class="header">
         <div class="logo">
             <img src="images/logo.png"/>
+        </div>
+        <div class="space">
         </div>
         <div class="nav">
             <ul>
@@ -146,8 +322,8 @@ header, footer {
       <div class="first">
     <aside>Aside</aside>
     <article>
-          <div>
-        
+          <div class="desc">
+            
         </div>
         <div class="volcano">
             <img src="images/volcanoooo.png"/>
@@ -157,10 +333,66 @@ header, footer {
       </div>
       <div class="second">
     <aside>Aside</aside>
-    <article>Article</article>
+    <article class="brands">
+          <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+          </article>
     <aside>Aside</aside>
 </div>      
-      
+      <div class="third">
+        <aside>Aside</aside>
+          <article class="pricing">
+            <div class="top">
+                <p>You’ve got the growth, we’ve got the boom.</p>
+              </div>
+              <div class="bottom">
+                  
+                <div class="one">hi
+                  <div class="icon">
+                    </div>
+                    <div class="title">
+                    </div>
+                    <div class="par">
+                    </div>
+                    <div class="button"></div>
+                  </div>
+                <div class="two">hello</div>
+                <div class="three">po</div>
+              </div>
+          </article>
+        <aside>Aside</aside>
+      </div>
+      <div class="fourth">
+        <aside>aside</aside>
+          <article>
+            <div class="bigbox">
+              <div class="uno">
+                
+                </div>
+              <div class="dos"></div>
+              <div class="tres"></div>
+              <div class="quartz"></div>
+              </div>
+          </article>
+        <aside>aside</aside>
+      </div>
+      <div class="fifth">
+        <aside>aside</aside>
+          <article>
+          <h1>Subscribe to our newsletter</h1>
+              <form>
+                  <input type="email"/>
+                  <button type="button">Subscribe</button>
+              </form>
+          </article>
+        <aside>aside</aside>
+      </div>
   <footer>Footer</footer>
    </main>
     </body>
